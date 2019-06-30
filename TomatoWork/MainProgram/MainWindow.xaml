@@ -1,0 +1,142 @@
+﻿<Window x:Class="MainProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainProgram"
+        mc:Ignorable="d"
+        Title="番茄工作法" Height="450" Width="800">
+    <Grid>
+        <Grid.DataContext>
+            <local:Clock/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+             <ColumnDefinition></ColumnDefinition>
+             <ColumnDefinition></ColumnDefinition>
+             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--column0-->
+            <StackPanel Orientation="Vertical" Grid.Column="0">
+            <Label>重要事项</Label>
+                <Image></Image>
+                <StackPanel Orientation="Horizontal">
+                    <!--这里的文本可以受到控制-->
+                    <Label>开启</Label>
+                  <ToggleButton> </ToggleButton>
+                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                <Label>开始吃番茄的时间：</Label>
+                    <TextBox></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                <Label>结束吃番茄的时间：</Label>
+                    <TextBox></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>多久吃完一个番茄：</Label>
+                    <TextBox></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                <Label>小憩时间：</Label>
+                    <TextBox></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>番茄6</Label>
+                    <TextBox></TextBox>
+                </StackPanel>
+        </StackPanel>
+        <!--column1-->
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <Label>早上</Label>
+                <Image></Image>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄1</Label>
+                <TextBox MinWidth="100" HorizontalAlignment="Center"   TextWrapping="Wrap" Width="160"></TextBox>
+                <Button x:Name="button" Content="Button" Width="75"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄2</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄3</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄4</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄5</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄6</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+        </StackPanel>
+        <!--column2-->
+        <StackPanel Orientation="Vertical" Grid.Column="2">
+            <Label>下午</Label>
+            <Image></Image>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄1</Label>
+                <TextBox Width="160"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄2</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄3</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄4</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄5</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄6</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+        </StackPanel>
+        <!--column3-->
+        <StackPanel Orientation="Vertical" Grid.Column="3">
+            <Label>晚上</Label>
+            <Image></Image>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄1</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄2</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄3</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄4</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄5</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>番茄6</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="392,375,0,0" TextWrapping="Wrap" FontSize="30" Text="当前时间：" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left"
+                   Text="{Binding CurrentTime}" />
+    </Grid>
+</Window>
